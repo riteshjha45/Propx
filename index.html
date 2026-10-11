@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Propx — Find land, flats, houses and rooms for rent or sale.">
+  <title>Propx | Find your place</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#"><span class="brand-icon">P</span>propx<span class="brand-dot">.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#properties">Explore</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="saved-nav" id="showSaved" type="button">♡ Saved <span id="savedCount">0</span></button>
+        <a class="btn btn-dark" href="#properties">Find a property <span>↗</span></a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> YOUR NEXT PLACE STARTS HERE</div>
+          <h1>Space to live.<br><em>Room to grow.</em></h1>
+          <p>Discover land, flats, houses and rooms for rent or sale. Your next chapter starts with the right place.</p>
+          <div class="hero-actions">
+            <a class="btn btn-green" href="#properties">Explore properties <span>↗</span></a>
+            <a class="quiet-link" href="#how-it-works">How Propx works <span>→</span></a>
+          </div>
+          <div class="hero-numbers">
+            <div><strong>01</strong><span>Search your way</span></div>
+            <div><strong>02</strong><span>Compare places</span></div>
+            <div><strong>03</strong><span>Connect directly</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/images/hero-home.jpg" alt="Property exterior" onerror="this.style.display='none'; this.parentElement.classList.add('image-placeholder')">
+          <div class="visual-caption"><span class="caption-symbol">⌂</span><div><strong>Find a place that feels right.</strong><small>Rent · Buy · Invest</small></div></div>
+          <div class="visual-stamp">YOUR PLACE<br>YOUR PACE.</div>
+        </div>
+      </div>
+      <div class="container search-container">
+        <form id="searchForm" class="search-panel">
+          <label class="search-field"><span class="search-icon">⌕</span><span><small>LOCATION</small><input id="locationSearch" type="search" placeholder="City, area or PIN code"></span></label>
+          <label class="search-field"><span class="search-icon">⌂</span><span><small>PROPERTY TYPE</small><select id="typeFilter"><option value="all">All property types</option><option value="Land">Land / Plot</option><option value="Flat">Flat / Apartment</option><option value="House">Independent house</option><option value="Room">Room / PG</option></select></span></label>
+          <label class="search-field"><span class="search-icon">₹</span><span><small>LISTING TYPE</small><select id="purposeFilter"><option value="all">Rent or sale</option><option value="rent">For rent</option><option value="sale">For sale</option></select></span></label>
+          <button class="btn btn-green search-button" type="submit">Search <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section properties-section" id="properties">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow">THE PROPX COLLECTION</div><h2>Find your kind <em>of place.</em></h2><p>Browse available spaces and find the one that fits your plans.</p></div>
+          <label class="sort-control">Sort by <select id="sortFilter"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+        </div>
+        <div class="category-row" id="categoryButtons">
+          <button class="category-btn active" data-category="all">All properties</button>
+          <button class="category-btn" data-category="Land">Land & plots</button>
+          <button class="category-btn" data-category="Flat">Flats</button>
+          <button class="category-btn" data-category="House">Houses</button>
+          <button class="category-btn" data-category="Room">Rooms & PG</button>
+        </div>
+        <div class="results-meta"><span id="resultsCount">0 properties</span><button id="clearFilters" type="button">Clear filters ↺</button></div>
+        <div class="property-grid" id="propertyGrid"></div>
+        <div class="empty-state hidden" id="emptyState"><div>⌂</div><h3>No matching properties</h3><p>Try another location or clear your filters.</p><button class="btn btn-dark" id="resetFilters" type="button">Reset search</button></div>
+      </div>
+    </section>
+
+    <section class="owner-band" id="how-it-works">
+      <div class="container owner-inner">
+        <div class="owner-mark">P<span>.</span></div>
+        <div><div class="eyebrow light">FOR PROPERTY OWNERS</div><h2>Have a place to share?</h2><p>Make your property easier to discover. Add your listing details and photos to the Propx property data file.</p></div>
+        <a class="btn btn-light" href="#contact">List your property <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="section how-section">
+      <div class="container">
+        <div class="section-heading centered"><div class="eyebrow">STRAIGHTFORWARD BY DESIGN</div><h2>A better way to <em>find a place.</em></h2><p>Everything starts with what matters to you.</p></div>
+        <div class="steps-grid">
+          <article class="step"><span class="step-no">01</span><div class="step-icon">⌕</div><h3>Search simply</h3><p>Filter by area, property type and whether you want to rent or buy.</p></article>
+          <article class="step"><span class="step-no">02</span><div class="step-icon">♡</div><h3>Save favourites</h3><p>Keep the properties you like close while you compare your options.</p></article>
+          <article class="step"><span class="step-no">03</span><div class="step-icon">↗</div><h3>Connect directly</h3><p>Use the contact details provided in a listing to reach the owner.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#"><span class="brand-icon">P</span>propx<span class="brand-dot">.</span></a>
+      <p>Find a place. Make it yours.</p>
+      <span>© <span id="year"></span> Propx · Property listings</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="propertyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="property-modal">
+      <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-gallery" id="modalGallery"></div>
+      <div class="modal-info">
+        <span class="listing-tag" id="modalPurpose"></span>
+        <h2 id="modalTitle">Property title</h2>
+        <p class="modal-location" id="modalLocation"></p>
+        <div class="modal-price" id="modalPrice"></div>
+        <p id="modalDescription"></p>
+        <div class="modal-facts" id="modalFacts"></div>
+        <h3>Property details</h3><p id="modalDetails"></p>
+        <a class="btn btn-green contact-owner" id="contactOwner" href="#" target="_blank" rel="noopener">Contact owner on WhatsApp ↗</a>
+        <p class="modal-note">Contact works when a valid phone number is provided by the listing owner.</p>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="properties.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
